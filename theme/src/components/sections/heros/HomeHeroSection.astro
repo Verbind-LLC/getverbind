@@ -1,0 +1,75 @@
+---
+import { Icon } from 'astro-icon';
+import { Container, Button } from '@littlesticks/odyssey-theme-components';
+import settings from '../../../config/settings.js';
+import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
+---
+
+<Container>
+	<section class="hero-section__section">
+		<div class="hero-section__text">
+				<h1>The mobile phone platform for professional teams.</h1>
+				<p>
+					Mobile phone stipends are expensive and labor-intensive. Verbind’s platform bundles employees under one plan, enabling you to give everyone on-the-go connectivity, hassle-free.
+				</p>
+				<div class="hero-btns__container">
+					<Button href="https://app.getverbind.com" customIcon
+						>View Demo
+            <Fragment slot="icon">
+              <Icon name="ic:baseline-chevron-right"/>
+            </Fragment>
+            </Button
+					>
+					<Button href="/theme/style-guide" unelevated>Contact Us</Button>
+				</div>
+        {settings.enableThemeSwitcher && <ThemeSwitcher client:load/>}
+		</div>
+		<div class="hero-section__image">
+				<picture>
+					<img
+						src="/assets/images/home/classic-hero.jpg"
+						alt="Astro Odyssey"
+						id="home-hero-image"
+					/>
+				</picture>
+		</div>
+	</section>
+</Container>
+
+<style>
+	.hero-section__section {
+		margin: var(--section-margin) auto;
+		min-height: clamp(90vh, 100vw, calc(100vh - var(--navbar-height)));
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		gap: 1rem;
+	}
+	.hero-section__text {
+		justify-self: center;
+		max-width: 25rem;
+	}
+	.hero-btns__container {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+	.hero-btns__container {
+		margin-right: 1rem;
+	}
+	.hero-section__image {
+		display: flex;
+	}
+	.hero-section__image img {
+		width: 100%;
+		height: 100%;
+		max-height: 80vh;
+		object-fit: cover;
+		border-radius: var(--theme-shape-radius);
+	}
+	@media (max-width: 768px) {
+		.hero-section__section {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
