@@ -16,7 +16,7 @@ Before you begin, ensure that you have the following tools installed on your com
    Open your terminal and navigate to the directory where you want to clone the website repository.
 
    ```sh
-   git clone https://github.com/grant-reidy/sea-kayaking-website.git
+   git clone https://github.com/Verbind-LLC/getverbind.git
 
 2. **Install the node modules:**
 
@@ -27,11 +27,3 @@ Before you begin, ensure that you have the following tools installed on your com
 
 3. **Open the website:**
    https://localhost:3000
-
-## Maintainers
-
-Peoples just submit a pull request if you update any of the pages and stuff. I'll get y'all stitutated to use the website.
-Image website icons are in the pptx file.
-
-## Website Updates
-When you push to main it'll automatically update the webstie.
