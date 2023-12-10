@@ -13,14 +13,14 @@ import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
 					Mobile phone stipends are expensive and labor-intensive. Verbind’s platform bundles employees under one plan, enabling you to give everyone on-the-go connectivity, hassle-free.
 				</p>
 				<div class="hero-btns__container">
-					<Button href="https://app.getverbind.com" customIcon
-						>View Demo
+					<Button href="mailto:hello@getverbind.com" customIcon
+						>Contact Us
             <Fragment slot="icon">
               <Icon name="ic:baseline-chevron-right"/>
             </Fragment>
             </Button
 					>
-					<Button href="/theme/style-guide" unelevated>Contact Us</Button>
+					<!-- <Button href="/theme/style-guide" unelevated>Contact Us</Button> -->
 				</div>
         {settings.enableThemeSwitcher && <ThemeSwitcher client:load/>}
 		</div>
@@ -34,11 +34,25 @@ import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
 				</picture>
 		</div>
 	</section>
+	<div class="logo-container">
+		<div class="logo-column">
+			<img src="/assets/images/home/companies/verizon.png" alt="Logo 1">
+		</div>
+		<div class="logo-column">
+			<img src="/assets/images/home/companies/tmobile.png" alt="Logo 2">
+		</div>
+		<div class="logo-column">
+			<img src="/assets/images/home/companies/vodafone.png" alt="Logo 3">
+		</div>
+		<div class="logo-column">
+			<img src="/assets/images/home/companies/ntt.png" alt="Logo 4">
+		</div>
+	</div>
 </Container>
 
 <style>
 	.hero-section__section {
-		margin: var(--section-margin) auto;
+		margin: 10rem auto;
 		min-height: clamp(90vh, 100vw, calc(100vh - var(--navbar-height)));
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -71,5 +85,26 @@ import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
 		.hero-section__section {
 			grid-template-columns: 1fr;
 		}
+	}
+	.logo-container {
+    	display: flex;
+		margin: auto;
+		width: 1000px;
+		align-items: flex-end;
+		justify-content: center;
+	}
+
+	.logo-column {
+    	text-align: center;
+		justify-content: center;
+		height: 50%;
+    	padding: 25px;
+	}
+
+	.logo-column img {
+		max-height: 150px;
+		min-height: 20px;
+		align: bottom;
+		width: auto;
 	}
 </style>
