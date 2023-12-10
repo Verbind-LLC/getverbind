@@ -9,8 +9,8 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://verbind-llc.github.io',
-  base: '/theme',
+  site: 'https://verbind-llc.github.io/',
+  base: 'theme/',
   // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
   sitemap: true,
   // Generate sitemap (set to "false" to disable)
